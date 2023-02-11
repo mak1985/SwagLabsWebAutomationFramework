@@ -11,18 +11,16 @@ import java.util.List;
 
 public class ProductsPage extends CommonUtils {
 
-    @FindBy (xpath = "//div[@class='inventory_item']")
+    @FindBy (xpath = "//div[@class='app_logo']")
+    public WebElement appLogo;
+    @FindBy (xpath = "//div[@class='inventory_item_name']")
     public List<WebElement> list;
-
-
     @FindBy(xpath = "//span[text()='Products']")
     public WebElement verifyProductBanner;
 
-    @FindBy (xpath = "//button[@data-test=\"add-to-cart-sauce-labs-backpack\"]")
-    public WebElement addToCartButton;
 
-    @FindBy(xpath = "//span[@class='shopping_cart_badge']/parent::a")
-    public WebElement cartIcon;
+
+
 
     public ProductsPage()
     {
